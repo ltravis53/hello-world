@@ -1,33 +1,21 @@
 {
 	"version": "2.0.0",
-	"windows": {
-		"options": {
-			"shell": {
-				"executable": "cmd.exe",
-				"args": [
-					"/C",
-					// The path to VsDevCmd.bat depends on the version of Visual Studio you have installed.
-					// find the path with the command dir "\VsDevCmd*" /s
-					"\"C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/Tools/VsDevCmd.bat\"",
-					"&&"
-				]
-			}
-		}
-	},
 	"tasks": [
 		{
-			"type": "shell",
+			"type": "cppbuild",
 			"label": "C/C++: cl.exe build active file",
 			"command": "cl.exe",
 			"args": [
 				"/Zi",
 				"/EHsc",
+				"/nologo",
 				"/Fe:",
-				//modify output filename by replacing with hard-coded filename "${workspaceFolder}\\myProgram.exe"
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
-				//build multiple .cpp files in current folder "${workspaceFolder}\\*.cpp" instead of "${file}"
 				"${file}"
 			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
 			"problemMatcher": [
 				"$msCompile"
 			],
@@ -35,6 +23,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
+			"detail": "compiler: cl.exe"
 		}
 	]
 }
