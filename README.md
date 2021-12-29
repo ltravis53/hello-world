@@ -16,14 +16,14 @@ https://code.visualstudio.com/docs/cpp/config-msvc
         - run type "cl" and it should show usage and you know its in there like swimwear
 ***     - go ahead and switch to run vs code outside a developer command prompt!!!!
 
-1.  Compiler and Integrated VS Development Command Line (/tasks.json)
+1.  Compiler and Integrated VS Development Command Line (hello-world/tasks.json)
   -  invokes the Microsoft C++ compiler to create an executable file based on source code
   -  main menu/top menu > terminal > configure default build task > cl.exe build active file
   -  modified file configs for file dir/name
   -  added path needed for VsDevCmd.bat
 
-2. Source Code (/helloworld.cpp)
+2. Source Code (hello-world/helloworld.cpp)
   -  I do not recommend creating file...
 
-3.  Debugging (/launch.json)
+3.  Debugging (hello-world/launch.json)
   -  main menu/top menu > run > add configuration > C++ (Windows) > cl.exe - Build and debug active file"
