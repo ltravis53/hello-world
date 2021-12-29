@@ -5,15 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cl.exe build and debug active file",
+            "name": "cl.exe - Build and debug active file",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${fileDirname}",
             "environment": [],
-            "console": "integratedTerminal"
+            "console": "externalTerminal",
+            "preLaunchTask": "C/C++: cl.exe build active file"
         }
     ]
 }
