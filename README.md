@@ -26,3 +26,4 @@ https://code.visualstudio.com/docs/cpp/config-msvc
   -  I do not recommend creating file...
 
 3.  launch.json (debugging)
+  -  main menu/top menu > run > add configuration > C++ (Windows) > cl.exe - Build and debug active file"
